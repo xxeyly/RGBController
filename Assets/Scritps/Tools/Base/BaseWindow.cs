@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public abstract class BaseWindow : MonoBehaviour
 {
@@ -21,4 +24,28 @@ public abstract class BaseWindow : MonoBehaviour
     {
         window.gameObject.SetActive(display);
     }
+
+    #region UI快速绑定
+
+    protected virtual void BindUI(ref Button uiObj, string uiPath)
+    {
+        uiObj = transform.Find("Window/" + uiPath).GetComponent<Button>();
+    }
+
+    protected virtual void BindUI(ref GameObject uiObj, string uiPath)
+    {
+        uiObj = transform.Find("Window/" + uiPath).gameObject;
+    }
+
+    protected virtual Image BindUI(Image uiObj, string uiPath)
+    {
+        return transform.Find("Window/" + uiPath).GetComponent<Image>();
+    }
+
+    protected virtual Text BindUI(Text uiObj, string uiPath)
+    {
+        return transform.Find("Window/" + uiPath).GetComponent<Text>();
+    }
+
+    #endregion
 }
