@@ -195,6 +195,7 @@ public class ViewType
         /// 主界面
         /// </summary>
         EMain,
+        EItemView
     }
 
     public EViewType viewType;

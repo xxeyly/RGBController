@@ -34,3 +34,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Scritps/Tools/Base/Main.cs.meta
+Assets/Scritps/Tools/Base/Main.cs
+Assets/Scritps/Tools/EventTriggerManager.cs.meta
+Assets/Scritps/Tools/MousePointerManager.cs.meta
+Assets/Scritps/Test.cs.meta
+Assets/Scritps/Test.cs

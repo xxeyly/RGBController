@@ -59,6 +59,7 @@ public class EventTriggerManager : MonoBehaviour
             eventID = eventType
         };
         //设置回调函数  
+        
         entry.callback.AddListener(action);
         //添加事件触发记录到GameObject的事件触发组件  
         trigger.triggers.Add(entry);

@@ -1,0 +1,27 @@
+[
+	{
+		"itemId": 0,
+		"itemName": "血瓶",
+		"itemContent": "最最普通的小药瓶",
+		"itemIconPath": "UI/hp",
+		"itemType": 0,
+		"itemCurrentCount": 1,
+		"itemMaxCount": 20,
+		"itemUseMinLevel": 1,
+		"itemSellGold": 10,
+		"itemRottenTime": 10,
+		"itemGrade": 0
+	},
+	{
+		"itemId": 1,
+		"itemName": "桃木剑",
+		"itemContent": "桃木制作的一把剑",
+		"itemIconPath": "UI/sword",
+		"itemType": 2,
+		"itemCurrentCount": 1,
+		"itemMaxCount": 1,
+		"itemUseMinLevel": 5,
+		"itemSellGold": 0,
+		"itemGrade": 0
+	}
+]

@@ -25,8 +25,14 @@ public abstract class BaseWindow : MonoBehaviour
         window.gameObject.SetActive(display);
     }
 
+
     #region UI快速绑定
 
+    /// <summary>
+    /// UI快速绑定
+    /// </summary>
+    /// <param name="uiObj">要绑定的物体</param>
+    /// <param name="uiPath">物体所在的位置,从Window下开始计算</param>
     protected virtual void BindUI(ref Button uiObj, string uiPath)
     {
         uiObj = transform.Find("Window/" + uiPath).GetComponent<Button>();
@@ -37,14 +43,14 @@ public abstract class BaseWindow : MonoBehaviour
         uiObj = transform.Find("Window/" + uiPath).gameObject;
     }
 
-    protected virtual Image BindUI(Image uiObj, string uiPath)
+    protected virtual void BindUI(ref Image uiObj, string uiPath)
     {
-        return transform.Find("Window/" + uiPath).GetComponent<Image>();
+        uiObj = transform.Find("Window/" + uiPath).GetComponent<Image>();
     }
 
-    protected virtual Text BindUI(Text uiObj, string uiPath)
+    protected virtual void BindUI(ref Text uiObj, string uiPath)
     {
-        return transform.Find("Window/" + uiPath).GetComponent<Text>();
+        uiObj = transform.Find("Window/" + uiPath).GetComponent<Text>();
     }
 
     #endregion
