@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 
@@ -51,6 +52,15 @@ public abstract class BaseWindow : MonoBehaviour
     protected virtual void BindUI(ref Text uiObj, string uiPath)
     {
         uiObj = transform.Find("Window/" + uiPath).GetComponent<Text>();
+    }
+
+    #endregion
+
+    #region 事件快速绑定
+
+    protected void BindListener(ref Button btn, UnityAction action)
+    {
+        btn.onClick.AddListener(action);
     }
 
     #endregion

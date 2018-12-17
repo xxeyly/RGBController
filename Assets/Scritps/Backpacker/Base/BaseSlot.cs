@@ -57,6 +57,9 @@ public abstract class BaseSlot : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
         if (eventData.button == PointerEventData.InputButton.Right)
         {
+
+            ItemOperation.Instance.OnChangePosition(transform.position-new Vector3(0,40,0));
+            ItemOperation.Instance.OnChangeItem(baseItem);
             OnMouseRightDown();
         }
     }
